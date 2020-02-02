@@ -1,3 +1,4 @@
+#!/usr/bin/env php
 <?php
 declare(strict_types = 1);
 const DEFAULT_PASSWORD_LENGTH=18;
