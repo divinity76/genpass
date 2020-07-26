@@ -33,9 +33,9 @@ if ($argc === 0) {
     die(1);
 }
 
-function generatePassword(int $len = 15): string
+function generatePassword(int $length = 15): string
 {
-    if ($len < 0) {
+    if ($length < 0) {
         throw new \InvalidArgumentException("len must be >=0");
     }
     $dict = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_';
@@ -43,7 +43,7 @@ function generatePassword(int $len = 15): string
     $dict = str_replace(str_split($problematic, 1), "", $dict);
     $randmax = strlen($dict) - 1;
     $ret = '';
-    for ($i = 0; $i < $len; ++ $i) {
+    for ($i = 0; $i < $length; ++ $i) {
         $ret .= $dict[random_int(0, $randmax)];
     }
     return $ret;
