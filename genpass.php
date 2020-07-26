@@ -33,7 +33,7 @@ if ($argc === 0) {
     die(1);
 }
 
-function generatePassword(int $len = 18): string
+function generatePassword(int $len = 15): string
 {
     if ($len < 0) {
         throw new \InvalidArgumentException("len must be >=0");
