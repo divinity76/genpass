@@ -40,7 +40,7 @@ function generatePassword(int $len = 15): string
     }
     $dict = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_';
     $problematic = "1IloO0-_"; // 5S?
-    $dict = preg_replace('/[' . preg_quote($problematic, '/') . ']/', "", $dict);
+    $dict = str_replace(str_split($problematic, 1), "", $dict);
     $randmax = strlen($dict) - 1;
     $ret = '';
     for ($i = 0; $i < $len; ++ $i) {
