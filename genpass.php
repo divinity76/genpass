@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 declare(strict_types = 1);
-const DEFAULT_PASSWORD_LENGTH=18;
+const DEFAULT_PASSWORD_LENGTH=15;
 /** @var string[] $argv */
 $args = $argv ?? [];
 unset($args[0]);
